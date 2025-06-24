@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+main {
+    width: 580px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    border-radius: 12px;
+}
+
+main>img {
+    width: 50%;
+    border-radius: 12px 0 0 12px;
+}
+
+section {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 32px;
+}
+
+.category {
+    text-transform: uppercase;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 32px;
+    color: hsl(212, 21%, 14%);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 14px;
+    line-height: 22px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.newprice {
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+}
+
+.oldprice {
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+button {
+    height: 42px;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+button:hover {
+    background-color: hsl(158, 42%, 18%);
+}
+
+@media (max-width: 680px) {
+    main {
+        flex-direction: column;
+        width: 320px;
+    }
+
+    main>img {
+        width: 100%;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+    }
+
+    section {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    .category {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+}
